@@ -337,10 +337,8 @@ section{position:relative;padding:80px 24px;}
   object-fit: contain;
 }
 
-/* optional fine-tune ONLY if needed */
-.mascot-img.med{
-  transform: scale(1.12);
-}
+.mascot-img.big{ width:clamp(130px,18vw,200px); }
+.mascot-img.med{ width:clamp(100px,14vw,160px); }
 .mascot-name{font-size:.78rem;font-weight:800;color:var(--amber);letter-spacing:.5px;}
 
 .mqs-bubbles{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
