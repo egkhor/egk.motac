@@ -181,8 +181,17 @@ section{position:relative;padding:80px 24px;}
   box-shadow:0 8px 24px rgba(232,160,32,.4);
 }
 .wi-badge strong{display:block;font-size:1.5rem;}
-.tourism-mascot{position:absolute;bottom:-10px;right:-10px;width:110px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.2));animation:mushiFloat 5s ease-in-out infinite;}
+.tourism-mascot{
+  position:absolute;
+  bottom:-20px;
+  right:-20px;
 
+  width: clamp(160px, 22vw, 260px); /* responsive scaling */
+
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.25));
+  animation: mushiFloat 5s ease-in-out infinite;
+  pointer-events: none; /* prevent blocking UI */
+}
 .why-feats{display:flex;flex-direction:column;gap:16px;margin-top:22px;}
 .wfeat{display:flex;gap:14px;align-items:flex-start;background:white;border-radius:14px;padding:16px 18px;box-shadow:0 3px 14px rgba(13,59,46,.07);}
 .wfeat-icon{font-size:1.6rem;flex-shrink:0;}
