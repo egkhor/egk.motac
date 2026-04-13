@@ -224,6 +224,33 @@ section{position:relative;padding:80px 24px;}
   display:inline-block;font-size:.65rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;
   padding:2px 10px;border-radius:50px;margin-bottom:8px;
 }
+
+.app-card::before{
+  content:'';position:absolute;inset:0;opacity:0;transition:opacity .32s;
+  background:radial-gradient(ellipse at top left, rgba(14,110,106,.12) 0%, transparent 70%);
+}
+.app-card:hover{border-color:rgba(14,110,106,.4);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.app-card:hover::before{opacity:1;}
+
+.app-card-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
+.app-icon{
+  width:56px;height:56px;border-radius:14px;flex-shrink:0;
+  object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.4);
+}
+
+  .app-ios-btn {
+  position: relative;
+  z-index: 5;
+}
+
+.app-card::before {
+  z-index: 0;
+}
+
+.app-card * {
+  position: relative;
+  z-index: 1;
+}
 .rb-klv{background:rgba(30,120,220,.25);color:#90C8FF;border:1px solid rgba(30,120,220,.4);}
 .rb-north{background:rgba(45,184,154,.2);color:#7DECD0;border:1px solid rgba(45,184,154,.4);}
 .rb-ferry{background:rgba(30,160,220,.2);color:#90D8FF;border:1px solid rgba(30,160,220,.4);}
